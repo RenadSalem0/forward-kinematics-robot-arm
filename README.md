@@ -51,21 +51,23 @@ T = T1 * T2
 Let’s define the matrices for a planar 2-DOF arm using standard DH convention:
 
 #### Frame 1 (base to link 1):
-```
-T1 =
-[ [cos(θ1), -sin(θ1), 0, L1*cos(θ1)],
-  [sin(θ1),  cos(θ1), 0, L1*sin(θ1)],
-  [   0   ,     0   , 1,     0     ],
-  [   0   ,     0   , 0,     1     ] ]
+   ```math
+  T1= \begin{bmatrix}
+   \cos(\theta_1) & -\sin(\theta_1) & 0 & L1 \cos(\theta_1) \\
+   \sin(\theta_1) & \cos(\theta_1) & 0 & L1 \sin(\theta_1) \\
+   0 & 0 & 1 & 0 \\
+   0 & 0 & 0 & 1 \\
+   \end{bmatrix}
 ```
 
 #### Frame 2 (link 1 to link 2):
-```
-T2 =
-[ [cos(θ2), -sin(θ2), 0, L2*cos(θ2)],
-  [sin(θ2),  cos(θ2), 0, L2*sin(θ2)],
-  [   0   ,     0   , 1,     0     ],
-  [   0   ,     0   , 0,     1     ] ]
+   ```math
+   T2= \begin{bmatrix}
+   \cos(\theta_2) & -\sin(\theta_2) & 0 & L2 \cos(\theta_2) \\
+   \sin(\theta_2) & \cos(\theta_2) & 0 & L2 \sin(\theta_2) \\
+   0 & 0 & 1 & 0 \\
+   0 & 0 & 0 & 1 \\
+   \end{bmatrix}
 ```
 
 ### 🔄 Final Transformation
