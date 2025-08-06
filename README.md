@@ -26,9 +26,8 @@ Both approaches lead to the same goal: computing the position of the end-effecto
 Using basic trigonometry, the position of the end-effector `(x, y)` is given by:
 
 ```math
-x = L1 * cos(θ1) + L2 * cos(θ1 + θ2)
-
-y = L1 * sin(θ1) + L2 * sin(θ1 + θ2)
+ x = L1 * cos(θ1) + L2 * cos(θ1 + θ2)
+ y = L1 * sin(θ1) + L2 * sin(θ1 + θ2)
 ```
 
 > These equations work for a **planar 2D system** and are ideal for introductory robotics tasks or simulation.
@@ -55,11 +54,8 @@ Let’s define the matrices for a planar 2-DOF arm using standard DH convention:
 ```math
 T1 =
 [ [cos(θ1), -sin(θ1), 0, L1*cos(θ1)],
-
   [sin(θ1),  cos(θ1), 0, L1*sin(θ1)],
-
   [0      , 0      , 1, 0          ],
-
   [0      , 0      , 0, 1          ] ]
 ```
 
@@ -67,11 +63,8 @@ T1 =
 ```math
 T2 =
 [ [cos(θ2), -sin(θ2), 0, L2*cos(θ2)],
-
   [sin(θ2),  cos(θ2), 0, L2*sin(θ2)],
-
   [0      , 0      , 1, 0          ],
-
   [0      , 0      , 0, 1          ] ]
 ```
 
