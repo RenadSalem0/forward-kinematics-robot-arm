@@ -27,6 +27,7 @@ Using basic trigonometry, the position of the end-effector `(x, y)` is given by:
 
 ```math
 x = L1 * cos(θ1) + L2 * cos(θ1 + θ2)
+
 y = L1 * sin(θ1) + L2 * sin(θ1 + θ2)
 ```
 
@@ -54,8 +55,11 @@ Let’s define the matrices for a planar 2-DOF arm using standard DH convention:
 ```math
 T1 =
 [ [cos(θ1), -sin(θ1), 0, L1*cos(θ1)],
+
   [sin(θ1),  cos(θ1), 0, L1*sin(θ1)],
+
   [0      , 0      , 1, 0          ],
+
   [0      , 0      , 0, 1          ] ]
 ```
 
@@ -63,8 +67,11 @@ T1 =
 ```math
 T2 =
 [ [cos(θ2), -sin(θ2), 0, L2*cos(θ2)],
+
   [sin(θ2),  cos(θ2), 0, L2*sin(θ2)],
+
   [0      , 0      , 1, 0          ],
+
   [0      , 0      , 0, 1          ] ]
 ```
 
@@ -84,7 +91,7 @@ The position of the end-effector will be in the last column of the result matrix
 
 ---
 
-## 🎓 When to Use Which?
+##  When to Use Which?
 
 | Scenario | Method |
 |----------|--------|
@@ -94,5 +101,4 @@ The position of the end-effector will be in the last column of the result matrix
 | Academic assignments (limited scope) | ✅ Trigonometric method |
 
 ---
-- [Wikipedia - Forward Kinematics](https://en.wikipedia.org/wiki/Forward_kinematics)
 
